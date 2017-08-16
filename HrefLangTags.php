@@ -14,6 +14,9 @@ class HrefLangTags extends Tags
      */
     public function index()
     {
+        if (empty($this->context['id'])) {
+            return '';
+        }
         $page = $this->context['id'];
 
         /** @var \Statamic\Data\Content\Content $data */
